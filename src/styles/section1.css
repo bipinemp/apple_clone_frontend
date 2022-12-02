@@ -1,0 +1,48 @@
+.section1 {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding-top: 10px;
+}
+.section1-btns {
+  display: flex;
+  gap: 1em;
+}
+.section1 h1 {
+  font-size: 3.2em;
+}
+.section1 p {
+  font-size: 1.4em;
+}
+.section1-btns p {
+  display: flex;
+  margin-top: 5px;
+  align-items: center;
+  color: var(--blue-txt);
+  cursor: pointer;
+  font-size: 1.3em;
+  transform: all 150ms linear;
+}
+.section1-btns p:hover {
+  text-decoration: underline;
+}
+.section1-imgs {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.section1-imgs img {
+  width: 400px;
+  object-fit: cover;
+  object-position: top;
+  height: 395px;
+}
+@media only screen and (max-width: 500px) {
+  .section1-imgs img {
+    height: 250px;
+  }
+}
