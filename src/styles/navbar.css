@@ -143,7 +143,7 @@ nav {
 }
 .ham-links {
   position: absolute;
-  top: -600px;
+  top: -430px;
   display: flex;
   flex-direction: column;
   justify-content: center;
