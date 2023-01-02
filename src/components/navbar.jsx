@@ -63,7 +63,19 @@ function Navbar() {
           transition={{ delay: 0.2, duration: 0.3, type: "tween" }}
         />
       )}
-      <div style={{ position: "relative", width: "100%" }}>
+      <div className={`ham-links ${ham ? "active" : ""}`}>
+        <span>Store</span>
+        <span>Mac</span>
+        <span>iPad</span>
+        <span>iPhone</span>
+        <span>Watch</span>
+        <span>AirPods</span>
+        <span>TV & Home</span>
+        <span>Only on Apple</span>
+        <span>Accessories</span>
+        <span>Support</span>
+      </div>
+      <div style={{ position: "relative", width: "100%", zIndex: "2000" }}>
         <nav
           style={{
             backgroundColor: open && "var(--nav-when-search)",
@@ -86,6 +98,7 @@ function Navbar() {
               <span className={ham ? "first active-first" : "first"}></span>
               <span className={ham ? "second active-second" : "second"}></span>
             </motion.div>
+
             <motion.a
               animate={cross ? "open" : "closed"}
               variants={variants}

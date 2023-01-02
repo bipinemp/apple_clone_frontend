@@ -7,7 +7,7 @@ nav {
   backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
-  z-index: 100;
+  z-index: 2000;
 }
 .overlay {
   position: fixed;
@@ -137,7 +137,40 @@ nav {
   top: 5px;
   transform: rotate(45deg);
 }
-
+.ham-links.active {
+  top: 44px;
+  transition: all 400ms linear;
+}
+.ham-links {
+  position: absolute;
+  top: -600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--nav-when-search);
+  color: var(--search);
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-size: 0.8em;
+  gap: 1em;
+  padding: 20px 70px;
+  transition: all 400ms ease-in-out;
+}
+.ham-links span {
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  padding: 5px 0px;
+  border-bottom: 1px solid var(--search);
+  transition: all 200ms ease-in-out;
+}
+.ham-links span:hover {
+  color: var(--white-txt);
+  transform: scale(1.02);
+  border-bottom: 2px solid var(--white-txt);
+}
 @media only screen and (max-width: 850px) {
   .search-bottom {
     display: none;
@@ -153,5 +186,8 @@ nav {
   }
   .search-bottom {
     width: 80%;
+  }
+  .nav {
+    background-color: var(--black);
   }
 }
